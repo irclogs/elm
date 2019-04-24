@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.com/irclogs/elm.svg?branch=master)](https://travis-ci.com/irclogs/elm)
+
 # IrcLog CouchApp - a web app to view irclogs
 
 The logs are stored in couchdb.
