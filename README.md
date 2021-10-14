@@ -1,5 +1,5 @@
+[![Build and Deploy](https://github.com/irclogs/elm/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/irclogs/elm/actions)
 
-[![Build Status](https://travis-ci.com/irclogs/elm.svg?branch=master)](https://travis-ci.com/irclogs/elm)
 
 # IrcLog CouchApp - a web app to view irclogs
 
