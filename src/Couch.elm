@@ -25,7 +25,7 @@ getChannelLog channel limit start end args =
             ("update_seq", "true"),
             ("reduce", "false")
         ]
-        viewUrl = url "https://irc.softver.org.mk/ddoc/_view/channel" (query ++ args)
+        viewUrl = url "https://db.softver.org.mk/irclog/_design/log/_view/channel" (query ++ args)
     in
         Http.get viewUrl viewResultDecoder
 
@@ -63,7 +63,7 @@ getChanges : String -> String -> Http.Request ChangesResult
 getChanges channel since =
     let
         timeout = 90
-        changesUrl = url "https://irc.softver.org.mk/api/_changes" [
+        changesUrl = url "https://db.softver.org.mk/irclog/_changes" [
             ("feed","longpoll"),
             ("timeout", toString <| timeout * 1000),
             ("include_docs", "true"),
@@ -84,7 +84,7 @@ getChanges channel since =
 
 getChannelList : Http.Request (List Channel)
 getChannelList =
-    let listUrl = url "https://irc.softver.org.mk/ddoc/_view/channel" [
+    let listUrl = url "https://db.softver.org.mk/irclog/_design/log/_view/channel" [
             ("update_seq", "true"),
             ("reduce", "true"),
             ("group_level", "1")

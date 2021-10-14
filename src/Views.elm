@@ -31,7 +31,7 @@ homePage model =
             div [style css] [text "This web page is a viewer of irclogs collected by my ",
                 a [href "https://github.com/gdamjan/erlang-irc-bot"] [text "erlang irc bot"],
                 text ". The bot stores the logs in a CouchDB where this web-app (or couchapp) is also stored. You can also ",
-                a [href "http://wiki.apache.org/couchdb/Replication"] [text "replicate"], text " the database at https://irc.softver.org.mk/api freely."],
+                a [href "http://wiki.apache.org/couchdb/Replication"] [text "replicate"], text " the database at https://db.softver.org.mk/irclog freely."],
             maybeLoading model.channelList channelList,
             div [style css] [text "If you want your irc channel on freenode logged, contact 'damjan' on #lugola."],
             pageFooter
