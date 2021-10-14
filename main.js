@@ -11753,7 +11753,7 @@ var _gdamjan$irclog_couchapp$Couch$viewResultDecoder = A5(
 var _gdamjan$irclog_couchapp$Couch$getChannelList = function () {
 	var listUrl = A2(
 		_gdamjan$irclog_couchapp$Helpers$url,
-		'https://irc.softver.org.mk/ddoc/_view/channel',
+		'https://db.softver.org.mk/irclog/_design/log/_view/channel',
 		{
 			ctor: '::',
 			_0: {ctor: '_Tuple2', _0: 'update_seq', _1: 'true'},
@@ -11793,7 +11793,7 @@ var _gdamjan$irclog_couchapp$Couch$getChanges = F2(
 		var timeout = 90;
 		var changesUrl = A2(
 			_gdamjan$irclog_couchapp$Helpers$url,
-			'https://irc.softver.org.mk/api/_changes',
+			'https://db.softver.org.mk/irclog/_changes',
 			{
 				ctor: '::',
 				_0: {ctor: '_Tuple2', _0: 'feed', _1: 'longpoll'},
@@ -11893,7 +11893,7 @@ var _gdamjan$irclog_couchapp$Couch$getChannelLog = F5(
 		};
 		var viewUrl = A2(
 			_gdamjan$irclog_couchapp$Helpers$url,
-			'https://irc.softver.org.mk/ddoc/_view/channel',
+			'https://db.softver.org.mk/irclog/_design/log/_view/channel',
 			A2(_elm_lang$core$Basics_ops['++'], query, args));
 		return A2(_elm_lang$http$Http$get, viewUrl, _gdamjan$irclog_couchapp$Couch$viewResultDecoder);
 	});
@@ -13060,7 +13060,7 @@ var _gdamjan$irclog_couchapp$Views$homePage = function (model) {
 										}),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$html$Html$text(' the database at https://irc.softver.org.mk/api freely.'),
+										_0: _elm_lang$html$Html$text(' the database at https://db.softver.org.mk/irclog freely.'),
 										_1: {ctor: '[]'}
 									}
 								}
