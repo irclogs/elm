@@ -11,7 +11,14 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: install deps
-      run: npm install -g elm@0.18.0 uglify-js
+      run: npm install -g uglify-js
+
+    - name: install elm 0.18
+      run: |
+        curl -L -o elm.tar.gz https://github.com/lydell/elm-old-binaries/releases/download/main/0.18.0-linux-x64.tar.gz
+        tar -xzf elm.tar.gz
+        chmod +x dist_binaries/*
+        mv dist_binaries/* /usr/local/bin/
 
     - name: build
       run: make build
